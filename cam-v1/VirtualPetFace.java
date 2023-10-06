@@ -48,7 +48,7 @@ public class VirtualPetFace extends JFrame implements ActionListener{
     private Timer timer;
     
 
-    private static final String imageBase = "./pet_images/";
+    private static final String imageBase = "pet_images";
     
     public static void main(String args[]) {
         VirtualPet newPet = new VirtualPet();   
@@ -222,7 +222,3 @@ public class VirtualPetFace extends JFrame implements ActionListener{
         }
     }
 }
-
- 
-
-
