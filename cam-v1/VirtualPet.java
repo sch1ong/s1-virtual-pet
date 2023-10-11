@@ -36,4 +36,32 @@ public class VirtualPet {
         face.setImage("asleep");
     }
 
+    public void message(String a) {
+        face.setMessage(a);
+    }
+
+    public void die () {
+        face.setImage("dead");
+    }
+
+    public void skeleton () {
+        face.setImage("skeleton");
+    }
+
+    public void flower () {
+        face.setImage("pushingdaisies");
+    }
+
+    public void angel () {
+        face.setImage("angel");
+    }
+
+    public void verysick () {
+        face.setImage("verysick");
+    }
+
+    public void joyful () {
+        face.setImage("joyful");
+    }
+
 } // end Virtual Pet
