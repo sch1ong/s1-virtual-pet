@@ -1,9 +1,15 @@
 public class Runner {
     public Runner() {
         VirtualPet p = new VirtualPet();
-        p.exercise();
-        takeABeat(1000);
-        p.feed();
+        int x = 1;
+        while(x == 1) {
+            p.exercise();
+            takeABeat(5000);
+            p.feed();
+            takeABeat(5000);
+            p.sleep();
+            takeABeat(5000);
+        }
     }
 
     public void takeABeat (int milliseconds) {
