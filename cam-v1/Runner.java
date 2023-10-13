@@ -3,6 +3,7 @@ import javax.swing.*;
 public class Runner {
     private String answerString1;
     private String answerString;
+    private boolean answerBoolean;
     public Runner() {
         VirtualPet p = new VirtualPet();
         int x = 1;
@@ -19,8 +20,8 @@ public class Runner {
         p.exercise();
         takeABeat(1000);
         p.verysick();
-        getResponse("Please help me " + answerString1);
-        if(answerString.equals("no")) {
+        optionSelect("Please help me " + answerString1, "sure", "no lol");
+        if(answerBoolean == false) {
             takeABeat(2000);
             p.die();
             takeABeat(3000);
@@ -34,6 +35,9 @@ public class Runner {
             p.sleep();
             takeABeat(1500);
             p.joyful();
+            takeABeat(1000);
+            
+
         }
         
     }
@@ -62,16 +66,24 @@ public class Runner {
         return s;
     }
 
-    public String optionSelect(String a) {
-        int n = JOptionPane.showConfirmDialog(
+    public String optionSelect(String a, String b, String c) {
+        Object[] options = {b,
+                            c};
+        int n = JOptionPane.showOptionDialog(
             new JFrame(),
             a,
-            "Decisons, Decisons",
-            JOptionPane.YES_NO_OPTION);
+            null,
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+            null,     //do not use a custom Icon
+            options,  //the titles of buttons
+            options[0]); //default button title);
         if(JOptionPane.YES_OPTION == n) {
+            answerBoolean = true;
             return "yes";
         }
         else {
+            answerBoolean = false;
             return "no";
         }
     }
