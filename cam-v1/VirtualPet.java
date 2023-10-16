@@ -71,4 +71,15 @@ public class VirtualPet {
         face.setImage("cry");
     }
 
+    public void kindaHungry () {
+        face.setImage("hungry");
+    }
+
+    public void starving () {
+        face.setImage("starving");
+    }
+
+    public void happy () {
+        face.setImage("happy");
+    }
 } // end Virtual Pet

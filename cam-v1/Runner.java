@@ -6,17 +6,8 @@ public class Runner {
     private boolean answerBoolean;
     public Runner() {
         VirtualPet p = new VirtualPet();
-        int x = 1;
+        int x = 0;
         getResponse("What's your name?");
-        // while(x == 1) {
-        //     p.exercise();
-        //     takeABeat(5000);
-        //     p.feed();
-        //     p.message(answerString);
-        //     takeABeat(5000);
-        //     p.sleep();
-        //     takeABeat(5000);
-        // }
         p.exercise();
         takeABeat(1000);
         p.verysick();
@@ -35,10 +26,41 @@ public class Runner {
             p.sleep();
             takeABeat(1500);
             p.joyful();
+            takeABeat(1500);
+            p.message(answerString1 + ", I'm hungry.");
+            p.kindaHungry();
+            optionSelect("Feed me please", "yeah, sure", "no I'm broke");
+            if(answerBoolean == false) {
+                takeABeat(1500);
+                p.starving();
+                p.message("PLEASE give me food!");
+                optionSelect(answerString1 + " I'm starving!!!", "I guess I can", "Hi starving, I'm Dad");
+                if(answerBoolean == false) {
+                    x += 1;
+                    takeABeat(500);
+                    p.message("please...");
+                    takeABeat(1000);
+                    p.die();
+                    takeABeat(3000);
+                    p.skeleton();
+                    takeABeat(3000);
+                    p.flower();
+                    takeABeat(3000);
+                    p.angel();
+                }
+                else if (x == 0) {
+                    p.happy();
+                    takeABeat(500);
+                    p.message("Thanks " + answerString1);
+                }}
+            else if( x == 0 ) {
+                p.happy();
+                takeABeat(500);
+                p.message("Thanks " + answerString1);
+            }
             takeABeat(1000);
-            
-
-        }
+            optionSelect("Give Him a gift?", "yes", "yes");
+            }
         
     }
 
