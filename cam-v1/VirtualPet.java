@@ -82,4 +82,16 @@ public class VirtualPet {
     public void happy () {
         face.setImage("happy");
     }
+
+    public void ecstatic () {
+        face.setImage("ecstatic");
+    }
+
+    public void present () {
+        face.setImage("present");
+    }
+
+    public void cookie () {
+        face.setImage("cookie");
+    }
 } // end Virtual Pet

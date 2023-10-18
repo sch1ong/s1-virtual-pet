@@ -60,6 +60,11 @@ public class Runner {
             }
             takeABeat(1000);
             optionSelect("Give Him a gift?", "yes", "yes");
+            p.present();
+            takeABeat(500);
+            p.cookie();
+            takeABeat(1000);
+            p.ecstatic();
             }
         
     }
